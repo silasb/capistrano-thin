@@ -1,6 +1,6 @@
 require 'erb'
 
-Capistrano::Configuration.instance.load do
+Capistrano::Configuration.instance(:must_exist).load do
   def _cset(variable, *args, &block)
     set(variable, *args, &block) if !exists?(variable)
   end
