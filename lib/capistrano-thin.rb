@@ -47,10 +47,6 @@ Capistrano::Configuration.instance.load do
   end
 
   namespace :thin do
-    task :god do
-      render_skel "god/thin.god.erb",  "#{shared_path}/god/#{application}-thin.god"
-    end
-
     task :config do
       render_skel "thin/thin.yml.erb", thin_config_file
     end
@@ -66,7 +62,7 @@ Capistrano::Configuration.instance.load do
     end
   end
 
-  after 'deploy:setup', 'thin:god', 'thin:shared_pids'
+  after 'deploy:setup', 'thin:shared_pids'
 
   before 'deploy:restart', 'thin:config'
   after 'deploy:symlink', 'thin:rolling_restart'

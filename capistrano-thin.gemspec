@@ -2,8 +2,8 @@
 require File.expand_path('../lib/capistrano-thin/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["John Bintz"]
-  gem.email         = ["john@coswellproductions.com"]
+  gem.authors       = ["John Bintz", "Silas Baronda"]
+  gem.email         = ["john@coswellproductions.com", "silas.barondda@gmail.com"]
   gem.description   = %q{Capistrano helper for managing a thin server}
   gem.summary       = %q{Capistrano helper for managing a thin server}
   gem.homepage      = ""
