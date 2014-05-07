@@ -9,6 +9,7 @@ Capistrano::Configuration.instance(:must_exist).load do
   _cset(:thin_config_file) { "#{current_path}/thin.yml" }
   _cset(:thin_config) { "-C #{thin_config_file}" }
 
+  _cset(:thin_address) { '127.0.0.1' }
   _cset(:thin_port) { 3000 }
   _cset(:thin_pid) { 'tmp/pids/thin.pid' }
   _cset(:thin_log) { 'log/thin.log' }
