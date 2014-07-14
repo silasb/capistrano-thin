@@ -17,6 +17,7 @@ Capistrano::Configuration.instance(:must_exist).load do
   _cset(:thin_max_persistent_conns) { 512 }
 
   _cset(:thin_servers) { 4 }
+  _cset(:thin_daemonize) { true }
 
   namespace :deploy do
     task :start do
