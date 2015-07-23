@@ -18,6 +18,7 @@ Capistrano::Configuration.instance(:must_exist).load do
 
   _cset(:thin_servers) { 4 }
   _cset(:thin_daemonize) { true }
+  _cset(:thin_tag) { "#{application}" }
 
   namespace :deploy do
     task :start do
